@@ -1,79 +1,96 @@
-class Book
-{
-	protected String isbn;
-    protected String bookTitle;
-    protected String authorName;
-    protected double price;
-    protected int availableQuantity;
-	Book()
+import java.lang.*;
+
+
+public  abstract class Book implements BookOperations
+{	
+	private String isbn;
+	private String bookTitle;
+	private String authorName;
+	private double price;
+	private int availableQuantity;
+	public Book(){}
+	public Book(String isbn, String bookTitle, String authorName, double price, int availableQuantity)
 	{
-		System.out.println("Default Constructor of Book");
+	
+		this.isbn = isbn;
+		this.bookTitle = bookTitle;
+		this.authorName =authorName;
+		this.price = price;
+		this.availableQuantity =availableQuantity;
 	}
-    Book(String isbn, String bookTitle, String authorName, double price, int availableQuantity)
-	{ 
-		System.out.println("Valued Constructor of Book");
-		this.isbn= isbn;
-		this.bookTitle= bookTitle;
-		this.authorName= authorName;
-		this.price= price;
-		this.availableQuantity=availableQuantity;
-	}
+	
 	public void setIsbn(String isbn)
 	{
-		this.isbn=isbn;
+		this.isbn = isbn;
 	}
 	public void setBookTitle(String bookTitle)
 	{
-		this.bookTitle=bookTitle;
+		this.bookTitle = bookTitle;
 	}
-    public void setAuthorName(String authorName)
+	public void setAuthorName(String authorName)
 	{
-		this.authorName=authorName;
+		this.authorName =authorName;
 	}
-    public void setPrice(double price)
+	public void setPrice(double price)
 	{
-		this.price=price;
+		this. price = price;
 	}
-    public void setAvaiableQuantity(int availableQuantity)
+	public void setAvailableQuantity(int availableQuantity)
 	{
-	    this.availableQuantity=availableQuantity;
+		this.availableQuantity =availableQuantity;
 	}
-	public String getIsbn( )
+	
+	public String getIsbn()
 	{
 		return isbn;
 	}
-    public String getBookTitle( )
+	public String getBookTitle ()
 	{
 		return bookTitle;
 	}
-    public String getAuthorName( )
+	public String getAuthorName()
 	{
 		return authorName;
 	}
-    public double getPrice( )
+	public double getPrice()
 	{
-	    return price;
+		return price;
 	}
-    public int getAvailableQuantity( )
+	public int getAvailableQuantity()
 	{
 		return availableQuantity;
 	}
+	
+	
 	public void addQuantity(int amount)
+    {
+	if(amount>0)
 	{
-		this.availableQuantity= amount+availableQuantity;
-		
+		availableQuantity = availableQuantity + amount;
 	}
+	else
+	{
+		System.out.println("Stockout");
+	}
+    }
     public void sellQuantity(int amount)
+    {
+	if(amount>0 && amount<=availableQuantity)
 	{
-		this.availableQuantity= availableQuantity-amount;
+		availableQuantity = availableQuantity - amount;
 	}
+	else
+	{
+		System.out.println("Stockout");
+	}
+    }
+
 	public void showDetails()
 	{
-		System.out.println(">>>>>Information about the Book<<<<<");
-		System.out.println("ISBN: "+this.isbn);
-		System.out.println("Book Title: "+this.bookTitle);
-		System.out.println("Author Name: "+this.authorName);
-		System.out.println("Price: "+this.price);
-		System.out.println("Available quantity after adding and selling: "+this.availableQuantity);
+		System.out.println("International Standard Book Number : " +isbn);
+		System.out.println("Book Title : " +bookTitle );
+		System.out.println("Author Name : " +authorName );
+		System.out.println("Price  : " +price );
+		System.out.println("Available Quantity : " +availableQuantity);
 	}
 }
