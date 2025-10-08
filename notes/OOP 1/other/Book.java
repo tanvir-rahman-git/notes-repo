@@ -1,94 +1,82 @@
-class Book{
+class Book
+{
+	private String isbn;
+	private String bookTitle;
+	private String authorName;
+	private double price;
+	private int availableQuantity;
+	
+	Book()
+	{
+		System.out.println("Default Constructor");
+	}
+ 	Book(String is, String bT, String aN, double p, int aQuan)
+	{
+		isbn=is;
+		bookTitle=bT;
+		authorName=aN;
+		price=p;
+		availableQuantity=aQuan;
+	}
+	public void setIsbn(String is)
+	{
+		isbn=is;
+	}	
+    public void setBookTitle(String bT)
+	{
+		bookTitle=bT;
+	}	
+    public void setAuthorName(String aN)
+	{
+		authorName=aN;
+	}	
+    public void setPrice(double p)
+	{
+		price=p;
+	}	
+    public void setAvaiableQuantity(int aQuan)
+	{
+		availableQuantity=aQuan;
+	}	
+	
+	public String getIsbn()
+	{
+		return isbn;
+	}	
+    public String getBookTitle()
+	{
+		return bookTitle;
+	}	
+    public String getAuthorName()
+	{
+		return authorName;
+	}	
+    public double getPrice()
+	{
+		return price;
+	}	
+    public int getAvailableQuantity()
+	{
+		return availableQuantity;
+	}
+	
+	public void addQuantity(int amount)
+	{
+		availableQuantity = availableQuantity + amount;
+		System.out.println("After adding there are: "+availableQuantity +" books");
+	}	
+    public void sellQuantity(int amount)
+	{
+		availableQuantity = availableQuantity - amount;
+		System.out.println("After selling there are: "+availableQuantity +" books"+"\n");
+	}
 
-private String isbn;
-private String bookTitle;
-private String authorName;
-private double price;
-private int availableQuantity;
-
-
-Book( ){
-           System.println.out("empty constructor   :-")
-};
-Book(String isbn1, String bookTitle1, String authorName1, double price1, int availableQuantity1){
-
-this.isbn = isbn1 ;
-this.bookTitle =  bookTitle1 ;
-this.authorName = authorName1 ;
-this.price = price1 ;
-this.availableQuantity = availableQuantity1 ;
-
-}
-void setIsbn(String isbn1){
-
-this.isbn = isbn1 ;
-
-}
-void setBookTitle(String bookTitle1){
-
-this.bookTitle =  bookTitle1 ;
-
-}
-void setAuthorName(String authorName1){
-
-this.authorName = authorName1 ;
-
-}
-void setPrice(double price1){
-
-this.price = price1 ;
-
-}
-void setAvaiableQuantity(int availableQuantity1){
-
-this.availableQuantity = availableQuantity1 ;
-
-}
-String getIsbn( ){
-
-return isbn;
-
-}
-String getBookTitle( ){
-
-return bookTitle;
-
-}
-String getAuthorName( ){
-
-return authorName;
-
-}
-double getPrice( ){
-
-return price;
-
-}
-int getAvailableQuantity( ){
-
-return availableQuantity;
-
-}
-void addQuantity(int amount){
-
-this.availableQuantity = availableQuantity + amount;
-System.out.println( amount + "books has been added. New available book quantity is      : " + availableQuantity);
-
-}
-void sellQuantity(int amount){
-
-this.availableQuantity = availableQuantity - amount;
-System.out.println( amount + "books has been sold. New available book quantity is       : " + availableQuantity);
-
-}
-void showDetails( ){
-
-  System.out.println("isbn              : " + isbn + " .");  
-  System.out.println("bookTitle         : " + bookTitle + " .");  
-  System.out.println("authorName        : " + authorName + " .");  
-  System.out.println("price             : " + price + " .");  
-  System.out.println("availableQuantity : " + availableQuantity + " . \n \n");  
-
-}
-
+	public void showDetails()
+	{
+		System.out.println("ISBN: "+isbn);
+		System.out.println("Book Title: "+bookTitle);
+		System.out.println("Author Name: "+authorName);
+		System.out.println("Price: "+price);
+		System.out.println("Available Quantity: "+availableQuantity);
+	}
 }
