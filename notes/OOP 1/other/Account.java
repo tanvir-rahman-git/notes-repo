@@ -1,47 +1,50 @@
-public class Account
+public class Account 
 {
-	private String accName;
-	private String acid;
-	private int balance;
-
-public Account()
+	private	int accountNumber;
+	private String name;
+	private int age;
+	private String nationality;
+	private double balance;
+	private double phonenumber;
+	
+	public Account()
 	{
-      System.out.println("Empty Constructor-" +"\n");		
+      System.out.println("Default Constructor-" +"\n");		
 	}
-	public Account(String accName,String acid, int balance)
-	{ //Valued constructor
+	public Account(int accountNumber,String name,int age,String nationality,double balance,double phonenumber)
+	{//Valued constructor
 		System.out.println("Valued Constructor-");
-		System.out.println("__________________________");
-		this.accName=accName;
-		this.acid=acid;
+		this.accountNumber=accountNumber;
+		this.name=name;
+		this.age=age;
+		this.nationality=nationality;
 		this.balance=balance;
+		this.phonenumber=phonenumber;
 	}
-	public void show(){
-	System.out.println("ACCOUNT NAME: " +this.accName);
-	System.out.println("ACCOUNT ID: " +this.acid);
-	System.out.println("BALANCE: " +this.balance+"\n");
-}
-public void deposit(int amount){
-	
-	amount=amount;
-	balance=balance+amount;
-	System.out.println("Deposit Amount is:"+amount+"TK");
-	System.out.println("New Balance After Deposit is:"+balance+"TK");
-	System.out.println("______________________________");
-}
-public void withdraw(int amount){
-	amount=amount;
-	balance=balance-amount;
-	System.out.println("Withdraw Amount is:"+amount+"TK");
-	System.out.println("New Balance After Withdraw is:"+balance+"TK");
-	System.out.println("_______________________________");
-}
-public void transfer(Account ob, int amount){
-	ob.balance=ob.balance;
-	balance=balance-amount;
-	System.out.println("After transfer Mr.Khan Balance is:"+balance+"TK");
-	System.out.println("After transfer MD.Faruk Balance is:"+ob.balance+"TK");
-	
-}
+	public void Value(int accountNumber,String Name,int age,String nationality,double balance,double phonenumber)//setter method
+	{
+		System.out.println("Method-");
+		this.accountNumber=accountNumber;
+		this.name=name;
+		this.age=age;
+		this.nationality=nationality;
+		this.balance=balance;
+		this.phonenumber=phonenumber;
+	}
+	//getter method
+    public int getAccountNumber(){return accountNumber;}
+    public String getName(){return name;}
+	public int getAge(){return age;}
+	public String getNationality(){return nationality;}
+    public double getBalance(){return balance;}
+	public double getPhonenumber(){return phonenumber;}
 
+public void show(){
+	System.out.println("ACCOUNT Holder ID NUMBER: " +this.accountNumber);
+	System.out.println("ACCOUNT Holder NAME: " +this.name);
+	System.out.println("ACCOUNT Holder Age: " +this.age);
+	System.out.println("ACCOUNT Holder Nationality: " +this.nationality);
+	System.out.println("Account Holder BALANCE: " +this.balance);
+	System.out.println("ACCOUNT Holder Contact Number: " +this.phonenumber +"\n");
+}
 }
