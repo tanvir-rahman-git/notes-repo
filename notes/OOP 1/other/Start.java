@@ -1,34 +1,23 @@
-import java.util.Scanner;
 public class Start
 {
 	public static void main(String[] args)
 	{
-		Scanner sin=new Scanner(System.in);
-		Book b1[] = new Book[5];
+		Account a1=new Account("11-q",45353);
+		SavingsAccount s1=new SavingsAccount("42-a",56667,7.5); 
+		FixedAccount f1=new FixedAccount("4-b",500000,5); 
+		Customer c1=new Customer(1313,"Mr. X",3);
+		c1.addAccount(a1);
+		c1.addAccount(s1);
+		c1.addAccount(f1);
+		c1.showAllAccounts();
 		
-		for (int i=0; i<b1.length; i++)
-		{
-			System.out.print("ISBN: ");
-			String is=sin.next();
-			System.out.print("Book title: ");
-			String bT=sin.next();
-			System.out.print("Author Name: ");
-			String aN=sin.next();
-			System.out.print("Price: ");
-			double p=sin.nextDouble();
-			System.out.print("Available Quantity: ");
-			int aQuan = sin.nextInt();
-			
-			System.out.print("Add Quantity: ");
-			int addQuantity = sin.nextInt(); 
-			System.out.print("Sold Quantity: ");
-			int sellQuantity = sin.nextInt();
-			System.out.print("\n");
-			
-			b1[i] = new Book(is, bT, aN, p, aQuan);
-			b1[i].showDetails();
-			b1[i].addQuantity(addQuantity);
-			b1[i].sellQuantity(sellQuantity); 
-		}
+		Account a2=new Account("12-q",45353);
+		//SavingsAccount s2=new SavingsAccount("32-a",56667,7.5); 
+		FixedAccount f2=new FixedAccount("5-b",500000,5); 
+		
+		Customer c2=new Customer(1313,"Ms. Y",5);
+		c2.addAccount(a2);
+		c2.addAccount(f2);
+		c2.showAllAccounts();
 	}
 }
