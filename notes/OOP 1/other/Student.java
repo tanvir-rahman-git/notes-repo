@@ -22,18 +22,6 @@ class Student
 	{
 		this.cgpa=cgpa;
 	}
-	public String getName()
-	{
-		return name;
-	}
-	public String getId()
-	{
-		return id;
-	}
-	public double getCgpa()
-	{
-		return cgpa;
-	}
 	public void show()
 	{
 		System.out.println("ID:"+id);
