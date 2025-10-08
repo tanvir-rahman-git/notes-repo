@@ -1,95 +1,94 @@
-import java.lang.*;
-
 public class Start
 {
-	public static void main(String args[])
+	public static void main(String[] args)
 	{
-		TextBook tb1 = new TextBook("978-0-5-10190", "Discrete Mathematics", "oscar levin.", 1500.0, 2, 3);
-		TextBook tb2 = new TextBook("978-0-1-20180", "Object Oriented Programming 1", "Dr.anonymous", 1250.0, 3, 4);
-		TextBook tb3 = new TextBook("978-0-9-30170", "Introduction to electrical circuit", "Dr.number 1", 1750.0, 4, 5);
-		TextBook tb4 = new TextBook("978-0-5-40160", "Physics", "Dr.amir hossen", 500.0, 5, 6);
-		TextBook tb5 = new TextBook("978-0-4-50150", "Effective Modern C++", "Scott Meyers", 5000.0, 6, 7);
-		
-		StoryBook sb1 = new StoryBook("978-0-5-10190", "To Kill a Mockingbird", "Harper Lee", 1200.0, 2, "Life");
-		StoryBook sb2 = new StoryBook("978-0-4", "Harry Potter and the Sorcerer's Stone", "J.K. Rowling", 2000.0, 3, "Immaginary");
-		StoryBook sb3 = new StoryBook("978-0-3", "The Great Gatsby", "F. Scott Fitzgerald", 1000.0, 4, "Historical");
-		StoryBook sb4 = new StoryBook("978-0-2", "One Hundred Years of Solitude", "Gabriel García Márquez", 800.0, 5, "adventure");
-		StoryBook sb5 = new StoryBook("978-0-1", "Beloved", "Toni Morrison", 600.0, 6, "Life story");
-		
-		BookShop b = new BookShop("International Bookshop-Bangladesh");
-		b.showDetails();
-	
-		
-		System.out.println("----------------------------------------");
-		if(b.insertBook(tb1)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(tb2) ){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(tb3)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(tb4)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(tb5)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		
-		if(b.insertBook(sb1)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(sb2) ){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(sb3)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(sb4)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		
-		if(b.insertBook(sb5)){System.out.println("Book Insertted");}
-		else{System.out.println("Can NOT be Inserted");}
-		System.out.println("----------------------------------------");
-		
-		b.showDetails();
-		
-		System.out.println("-----------------------------------------");
-		if(b.removeBook(tb1)){System.out.println("Book Removed");}
-		else{System.out.println("Can NOT be Removed");}
-		
-		if(b.removeBook(sb3) ){System.out.println("Book Removed");}
-		else{System.out.println("Can NOT be Removed");}
-		System.out.println("------------------------------------------");
-		
-		b.showDetails();
-		
-		System.out.println("------------------------------------------");
-		Book b1 = b.searchBook("978-0-5-10190");
-		
-		if(b1 != null)
-		{
-			System.out.println("Object Found....");
-			b1.showDetails();
-		}
-		else
-		{
-			System.out.println("Object NOT Found....");
-		}
-		
-		Book b2 = b.searchBook("978-0-13-601970-1");
-		
-		if(b2 != null)
-		{
-			System.out.println("Object Found....");
-			b2.showDetails();
-		}
-		else
-		{
-			System.out.println("Object NOT Found....");
-		}
-		System.out.println("-------------------------------------------");
+
+
+
+StoryBook S2 = new StoryBook("9781781100349", " Harry Potter and the Philosopher's Stone", "J. K. Rowling", 5000000, 10000,
+"threaling");
+
+
+
+StoryBook S1 = new StoryBook( );
+
+S1.setIsbn("9781781100349");
+
+S1.setBookTitle("Harry Potter and the Philosopher's Stone");
+
+S1.setAuthorName("J. K. Rowling");
+
+S1.setPrice(25000);
+
+S1.setAvaiableQuantity(5000);
+
+S1.setCategory("threaling");
+
+System.out.println("isbn is                    : " + S1.getIsbn());
+
+System.out.println("Book Title is              : " + S1.getBookTitle());
+
+System.out.println("author Name is             : " + S1.getAuthorName());
+
+System.out.println("price is : " + S1.getPrice());
+
+System.out.println("available book quantity is : " + S1.getAvailableQuantity());
+System.out.println("Book Category is           : " + S1.getCategory());
+
+S1.addQuantity(100);
+
+S1.sellQuantity(500);
+
+S1.showDetails();
+
+
+
+
+System.out.println("End of storyBook Section          :\n \n \n");
+
+
+
+TextBook T2 = new TextBook("8174506314", " Physics Text Book Part 1", "NCERT (Author)", 500000, 10000,
+15000);
+
+
+
+
+TextBook T1 = new TextBook( );
+
+
+T1.setIsbn("8174506314");
+
+T1.setBookTitle("Physics Text Book Part 1 ");
+
+T1.setAuthorName(" NCERT (Author)");
+
+T1.setPrice(1999);
+
+T1.setAvaiableQuantity(1000);
+
+T1.setStandard(9000);
+
+System.out.println("isbn is                    : " + T1.getIsbn());
+
+System.out.println("Book Title is              : " + T1.getBookTitle());
+
+System.out.println("author Name is             : " + T1.getAuthorName());
+
+System.out.println("price is                   : " + T1.getPrice());
+
+System.out.println("available book quantity is : " + T1.getAvailableQuantity());
+
+System.out.println("Book standard is           : " + T1.getStandard());
+
+T1.addQuantity(9);
+
+T1.sellQuantity(5);
+
+T1.showDetails();
+
+
 
 	}
 }
+
