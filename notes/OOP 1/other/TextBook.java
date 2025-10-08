@@ -1,34 +1,23 @@
-import java.lang.*;
+class TextBook extends Book {
 
-public class TextBook extends Book
-{	
-	
-	private int standard;
-	
-	public TextBook(){ }
-	
-	public TextBook(String isbn, String bookTitle, String authorName, double price, int availableQuantity,int standard)
-	{
-	    super(isbn,  bookTitle,  authorName,  price,  availableQuantity);
-		this.standard=standard;
-	}
-	
-	public void setStandard(int standard)
-	{
-		this.standard = standard;
-	}
-	
-	
-	public int getStandard()
-	{
-		return standard;
-	}
-	
-	public void showDetails()
-	{
-		super.showDetails();
-		System.out.println("Standard  : " +standard );
-		System.out.println();
-		
-	}
+private int standard;
+
+TextBook( ) {
+
+}
+TextBook(String isbn1, String bookTitle1, String authorName1, double price1, int availableQuantity1,
+int standard1){
+
+super(isbn1, bookTitle1, authorName1 , price1, availableQuantity1);
+this.standard = standard1;
+
+
+}
+void setStandard(int standard1){
+  this.standard = standard1;
+}
+int getStandard( ){
+  return standard;
+}
+
 }
