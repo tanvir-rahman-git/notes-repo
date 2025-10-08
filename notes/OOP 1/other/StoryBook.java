@@ -1,35 +1,24 @@
-import java.lang.*;
+class StoryBook extends Book {
 
-public class StoryBook extends Book
-{	
-	
-	private String category;
-	
-	public StoryBook(){ }
-	
-	public StoryBook(String isbn, String bookTitle, String authorName, double price, int availableQuantity,String category)
-	{
-	
-		super(isbn,  bookTitle,  authorName,  price,  availableQuantity);
-		this.category = category;
-	}
-	
-	
-	public void setCategory(String category)
-	{
-		this.category=category;
-	}
-	
-	
-	public String getCategory()
-	{
-		return category;
-	}
+private String category;
 
-	public void showDetails()
-	{
-		super.showDetails ();
-		System.out.println("Category : " +category);
-		System.out.println();
-	}
+StoryBook( ){
+
+}
+
+StoryBook(String isbn1, String bookTitle1, String authorName1, double price1, int availableQuantity1,
+String category1){
+  
+super(isbn1, bookTitle1, authorName1 , price1, availableQuantity1);
+this.category = category1;
+}
+
+void setCategory(String category1){
+  this.category = category1;
+}
+
+String getCategory( ){
+  return category;
+}
+
 }
