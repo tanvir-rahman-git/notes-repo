@@ -1,16 +1,10 @@
 public class AccountMain{
 	
 	public static void main(String[] args)
-{       
-		Account A1= new Account();
-		Account A2= new Account("Mr.A","Na",99999);
-		A2.show();
-		
-		Account A3= new Account("Mr.B","Cl",5555);
-		A3.show();
-	
-	A2.deposit(500);
-    A2.withdraw(100);
-	A2.transfer(A3,400);
-}
+{       Account x1= new Account();
+		Account y1= new Account(123279543,"My Account",25,"Bangladeshi",99999.99,555569);
+		y1.show();
+		x1.Value(455969553,"Sender",30,"Bangladeshi",55555.55,666642);
+		x1.show();
+	}
 }
