@@ -10,10 +10,10 @@ public class studentMain
 		s1.setId("12-2");
 		s1.setName("ABC");
 		s1.setCgpa(3.75);
-		//s1.show();
-		System.out.println("ID:"+s1.getId());
-		System.out.println("Name:"+s1.getName());
-		System.out.println("CGPA:"+s1.getCgpa());
+		s1.show();
+		/*System.out.println("ID:"+s1.id)
+		System.out.println("Name:"+s1.name);
+		System.out.println("CGPA:"+s1.cgpa);*/
 		
 	}
 }
